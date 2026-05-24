@@ -48,11 +48,13 @@ elseif type(vim.g.melange_enable_font_variants) == 'table' then
 end
 
 local function get_groups()
+  local config = Melange.config
+
   local groups = {
     ---- :help highlight-default -------------------------------
 
-    Normal = { fg = a.fg, bg = a.bg },
-    NormalFloat = { bg = a.float },
+    Normal = config.transparent and {fg = a.fg, bg = nil} or { fg = a.fg, bg = a.bg },
+    NormalFloat = config.transparent and {bg = nil} or { bg = a.float },
     -- FloatBorder = { },
     FloatTitle = { fg = c.yellow, bg = a.float },
     FloatFooter = { fg = c.yellow, bg = a.float },

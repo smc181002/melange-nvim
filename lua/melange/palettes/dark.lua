@@ -32,4 +32,9 @@ return {
     blue    = "#273142",
     magenta = "#422741",
   },
+  github_gitsigns = {
+    green   = "#0FBF3E",
+    yellow  = "#E5C07B",
+    red     = "#BD2C00",
+  },
 }
